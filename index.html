@@ -3,87 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Corporate Compliance & Registered Agent Services - Coming Soon</title>
     <style>
-        /* Reset default browser margins */
+        /* CSS Reset and Variables */
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #3182ce;
+            --light-bg: #f7fafc;
+            --text-color: #2d3748;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .container {
+            color: var(--text-color);
             background-color: #ffffff;
-            padding: 3rem 4rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            max-width: 600px;
-            width: 90%;
+            line-height: 1.6;
         }
 
-        .icon {
-            font-size: 4rem;
+        /* Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section (Coming Soon) */
+        .hero {
+            background-color: var(--light-bg);
+            padding: 8rem 5% 4rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #2c3e50;
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #4a5568;
         }
 
-        p {
-            font-size: 1.1rem;
-            color: #7f8c8d;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-
-        /* Simple animated dots for the "working on it" vibe */
-        .dots::after {
-            content: '';
-            animation: dots 1.5s steps(5, end) infinite;
-        }
-
-        @keyframes dots {
-            0%, 20% { color: rgba(0,0,0,0); text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
-            40% { color: #3498db; text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
-            60% { text-shadow: .25em 0 0 #3498db, .5em 0 0 rgba(0,0,0,0); }
-            80%, 100% { text-shadow: .25em 0 0 #3498db, .5em 0 0 #3498db; }
-        }
-
-        .footer {
-            margin-top: 2rem;
+        .badge {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
             font-size: 0.9rem;
-            color: #bdc3c7;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 5%;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* In a full build, this would be a hamburger menu */
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="icon">🛠️</div>
-        <h1>Coming Soon</h1>
-        <p>We are currently working hard to build something great. Check back shortly to see our new website<span class="dots"></span></p>
-        
-        <div class="footer">
-            &copy; 2026. All rights reserved.
+    <header>
+        <div class="logo">Corporate Services LLC</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <span class="badge">Website Under Construction</span>
+        <h1>Professional Corporate Formation & Compliance</h1>
+        <p>We are currently upgrading our website to serve you better. We still offer full support for establishing and maintaining your corporate entities.</p>
+    </section>
+
+    <section id="services">
+        <h2>What We Do</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Registered Agent Services</h3>
+                <p>Reliable statutory representation for your business. We handle service of process, official state correspondence, and ensure you never miss a critical compliance deadline in key jurisdictions like Wyoming, Delaware, and Florida.</p>
+            </div>
+            <div class="service-card">
+                <h3>Entity Formation</h3>
+                <p>Streamlined incorporation services for LLCs and C-Corps. From drafting Articles of Organization to custom Operating Agreements, we ensure your corporate structure is established legally and efficiently.</p>
+            </div>
+            <div class="service-card">
+                <h3>Tax & Ongoing Compliance</h3>
+                <p>Comprehensive administrative support. We assist with obtaining EINs, filing annual reports, managing administrative reinstatements, and handling complex filings like IRS Form 1120 and Form 5472 for foreign-owned entities.</p>
+            </div>
         </div>
-        <div class="footer">
-            &copy; Shubhanshu@trustlexglobal.com
+    </section>
+
+    <section id="about" style="background-color: var(--light-bg);">
+        <h2>About Us</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>We provide domestic and international founders with the legal infrastructure needed to operate smoothly in the United States. Whether you are dealing with a simple LLC setup or complex reporting requirements for a foreign-owned disregarded entity, our team ensures your business remains in good standing with state and federal agencies.</p>
         </div>
-    </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-info">
+            <p>Ready to start a new entity or need help with a compliance issue while our site is under construction?</p>
+            <br>
+            <p><strong>Email:</strong> support@yourdomain.com</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Mailing Address:</strong> [Your Registered Office Address]</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Corporate Services LLC. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
